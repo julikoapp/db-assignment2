@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Create A Caregiver Page</h1>
+
+  <form  method="POST">
+    <label for="user_id">User id:</label>
+    <input type="text" id="user_id" name="user_id" required><br><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    
+    <label for="given_name">Name:</label>
+    <input type="text" id="given_name" name="given_name" required><br><br>
+    
+    <label for="surname">Surname:</label>
+    <input type="text" id="surname" name="surname" required><br><br>
+    
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" required><br><br>
+
+    <label for="phone_number">Phone Number:</label>
+    <input type="text" id="phone_number" name="phone_number" required><br><br>
+    
+    <label for="profile_description">Profile Description:</label>
+    <input type="text" id="profile_description" name="profile_description" ><br><br>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <label for="gender">Gender:</label>
+    <input type="text" id="gender" name="gender" required><br><br>
+
+    <label for="caregiving_type">Caregiving type (enter one of these values:'Playmate for Children', 'Caregiver for Elderly', 'Babysitter')</label>
+    <input type="text" id="caregiving_type" name="caregiving_type" required><br><br>
+
+    <label for="hourly_rate">Hourly rate(enter number):</label>
+    <input type="text" id="hourly_rate" name="hourly_rate" required><br><br>
+
+    <input type="submit" value="Submit">
+    </form>
+
+{% endblock %}
+
+
+    

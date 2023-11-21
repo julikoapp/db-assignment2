@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2> List of members</h2>
+
+<table>
+{% for member in members %}
+
+<tr>
+<td>{{member['user_id']}}</td>
+        <td>{{member['email']}}</td>
+    
+        <td>{{member['given_name']}}</td>
+        <td>{{member['surname']}}</td>
+    
+        <td>{{member['city']}}</td>
+    
+        <td>{{member['phone_number']}}</td>
+    
+        <td>{{member['profile_description']}}</td>
+    
+        <td>{{member['house_rules']}}</td>
+        <td>
+        <a href="/member/update/{{member['user_id']}}">Update</a>
+        </td>
+        <td>
+        <a href="/member/delete/{{member['user_id']}}">DELETE</a>
+        </td>
+</tr>
+
+
+{% endfor %}
+</table>
+
+{% endblock %}

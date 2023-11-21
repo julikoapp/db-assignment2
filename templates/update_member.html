@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2> Update a member:</h2>
+<p>Member id: {{member.id}}</p>
+<p> Member name: {{member.given_name}}</p>
+<!-- TODO: do we want to give power to update given_name and surname of the member? -->
+<p>Note: You need to change only the field that you want to update/change, otherwise leave it the same way.</p>
+<form action='' method = "POST">
+    <p>email: <input type = "email" name = "email" value="{{member.email}}"/></p>
+    <p>city <input type = "text" name = "city"  value="{{member.city}}"/></p>
+    <p>phone_number <input type = "text" name = "phone_number" value="{{member.phone_number}}"/></p>
+    <p>profile_description <input type = "text" name = "profile_description" value="{{member.profile_description}}"/></p>
+    <p>house_rules <input type = "text" name = "house_rules" value="{{member.house_rules}}"/></p>
+    
+    <button type="submit">Submit</button>
+  </form>
+
+  {% endblock %}

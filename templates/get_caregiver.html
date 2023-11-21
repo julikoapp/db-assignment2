@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2> List of caregivers</h2>
+<table>
+{% for caregiver in caregivers %}
+    <tr>
+        <td>{{caregiver['user_id']}}</td>
+        <td>{{caregiver['email']}}</td>
+        <td>{{caregiver['given_name']}}</td>
+        <td>{{caregiver['surname']}}</td>
+        <td>{{caregiver['city']}}</td>
+        <td>{{caregiver['phone_number']}}</td>
+        <td>{{caregiver['profile_description']}}</td>
+        <td>{{caregiver['gender']}}</td>
+        <td>{{caregiver['caregiving_type']}}</td>
+        <td>{{caregiver['hourly_rate']}}</td>
+<td> <a href="/caregiver/update/{{caregiver['user_id']}}">Update</a></td>
+<td> <a href="/caregiver/delete/{{caregiver['user_id']}}">Delete</a></td>
+</tr>
+
+{% endfor %}
+</table>
+{% endblock %}

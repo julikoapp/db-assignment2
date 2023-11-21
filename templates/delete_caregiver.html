@@ -1,0 +1,13 @@
+<!-- FILEPATH: /Users/Ulia/Desktop/Uni/Y3S1/CS341_DB/db_assignment/flask-app/templates/user_page.html -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method="post">
+    Are you sure you want to delete caregiver {{caregiver['given_name']}} {{caregiver['surname']}}?
+    <input type = "submit" value="YES">
+    <a href='/caregivers/get'>Cancel</a>
+</form>
+
+{% endblock %}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flask App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to Caregivers App</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('create_member') }}">Create Member</a></li>
+            <li><a href="{{ url_for('create_caregiver') }}">Create Caregiver</a></li>
+            <li><a href="{{ url_for('get_members') }}">Get Members</a></li>
+            <li><a href="{{ url_for('get_caregivers') }}">Get Caregivers</a></li>
+        </ul>
+    </nav>
+    
+    
+    
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    
+    <footer>
+        <p>&copy; 2022 Flask App. All rights reserved.</p>
+    </footer>
+</body>
+</html>
